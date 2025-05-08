@@ -473,7 +473,7 @@ function App() {
                     </div>
                   </div>
                   <div className="phone-number" style={{ marginTop: 8 }}>
-                    Your phone number <span style={{ float: "right" }}>+91 6370497429</span>
+                    Your phone number <span style={{ float: "right" }}>+91 1234567890</span>
                   </div>
                 </div>
               </div>
