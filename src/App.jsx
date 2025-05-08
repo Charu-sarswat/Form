@@ -467,7 +467,7 @@ function App() {
                         style={{ width: "100%" }}
                       />
                       {reviewName && <span className="input-checkmark">&#10003;</span>}
-                      <span className="input-counter" style={{ right: 0, bottom: -18 }}>
+                      <span className="input-counter" style={{ right: 0, bottom: -10 }}>
                         {reviewName.length} / 30
                       </span>
                     </div>
