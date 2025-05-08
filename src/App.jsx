@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import "./index.css";
 import olxAvatar from './assets/olx-avatar.png';
 import Select from 'react-select';
-import { Iframe } from 'react-iframe';
 
 function InputWithCheck({ value, onChange, as = "input", maxLength, showCounter, ...props }) {
   const length = value ? value.length : 0;
@@ -497,16 +496,20 @@ function App() {
           height: "500px",
           margin: "20px 0",
           border: "1px solid #ddd",
-          borderRadius: "4px"
+          borderRadius: "4px",
+          overflow: "hidden"
         }}>
-          <Iframe
-            url="https://form-c.netlify.app/"
+          <iframe
+            src="https://form-c.netlify.app/"
             width="100%"
             height="100%"
             id="form-webview"
             className="webview-frame"
-            display="block"
-            position="relative"
+            style={{
+              border: "none",
+              display: "block"
+            }}
+            title="Form WebView"
             allowFullScreen
           />
         </div>
