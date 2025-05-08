@@ -373,7 +373,7 @@ textarea {
   font-size: 10px;
   position: absolute;
   right: 8px;
-  bottom: -11px;
+  bottom: -9px;
 }
 
 .input-wrapper input[style*="border-color: #ff3a1e"]~.input-counter {
