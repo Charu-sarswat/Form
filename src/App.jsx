@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import olxAvatar from './assets/olx-avatar.png';
 import Select from 'react-select';
-import Iframe from 'react-iframe';
+import { Iframe } from 'react-iframe';
 
 function InputWithCheck({ value, onChange, as = "input", maxLength, showCounter, ...props }) {
   const length = value ? value.length : 0;
