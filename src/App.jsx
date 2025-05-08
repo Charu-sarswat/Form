@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./index.css";
 import olxAvatar from './assets/olx-avatar.png';
 import Select from 'react-select';
+import Iframe from 'react-iframe';
 
 function InputWithCheck({ value, onChange, as = "input", maxLength, showCounter, ...props }) {
   const length = value ? value.length : 0;
@@ -42,6 +43,7 @@ function ButtonGroup({ options, value, onChange }) {
 function App() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [showWebView, setShowWebView] = useState(false);
   // State for all fields
   const [type, setType] = useState("");
   const [bhk, setBhk] = useState("");
@@ -489,6 +491,26 @@ function App() {
           </form>
         )}
       </div>
+      {showWebView && (
+        <div style={{
+          width: "100%",
+          height: "500px",
+          margin: "20px 0",
+          border: "1px solid #ddd",
+          borderRadius: "4px"
+        }}>
+          <Iframe
+            url="https://form-c.netlify.app/"
+            width="100%"
+            height="100%"
+            id="form-webview"
+            className="webview-frame"
+            display="block"
+            position="relative"
+            allowFullScreen
+          />
+        </div>
+      )}
     </div>
   );
 }
